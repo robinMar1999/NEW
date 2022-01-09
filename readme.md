@@ -13,7 +13,7 @@ $ npm i -g .
 
 ## Usage & Examples
 
-#### To generate a MongoDB model in Node.js app
+### To generate a MongoDB model in Node.js app
 
 Run this command in the respective app.
 
@@ -29,7 +29,7 @@ model will be created in _src/models/_ directory of your app.
 $ new model rider
 ```
 
-#### To generate a route in Node.js app
+### To generate a route in Node.js app
 
 ```
 $ new route <route_name>
@@ -43,7 +43,7 @@ route will be created in _src/routes/_ directory of your app.
 $ new route rider
 ```
 
-#### To generate a functional component in React app
+### To generate a functional component in React app
 
 Open terminal in react app and run following command.
 
