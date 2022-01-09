@@ -4,6 +4,7 @@ import { Command } from "commander";
 
 import genModel from "./src/genModel.js";
 import genRoute from "./src/genRoute.js";
+import genFcmp from "./src/genFcmp.js";
 
 const program = new Command();
 
@@ -36,11 +37,10 @@ Examples:
   );
 
 program
-  .command("fcmp")
+  .command("fcmp <cmp_name> [additinalPath]")
   .description("generate function component for React app")
-  .requiredOption("-n, --name <component_name>", "component name")
-  .action((options) => {
-    console.log("component_name", options.name);
+  .action((cmp_name, additinalPath) => {
+    genFcmp(cmp_name, additinalPath);
   })
   .addHelpText(
     "after",
