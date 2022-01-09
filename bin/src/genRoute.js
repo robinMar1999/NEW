@@ -1,11 +1,8 @@
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 import chalk from "chalk";
-import boxen from "boxen";
-import capitalize from "lodash.capitalize";
+
+import outputMsg from "../utils/outputMsg.js";
 
 // Text to store in the file
 const getRouteText = () => `import { Router } from "express";
@@ -33,7 +30,12 @@ const genRoute = (name) => {
   const routeText = getRouteText(name);
 
   fs.writeFileSync(path.join(currPath, `${name.toLowerCase()}.js`), routeText);
-  console.log("route created!");
+  const text = `${
+    chalk.bold.yellow(
+      path.join(currPath, chalk.green(name.toLowerCase() + ".js"))
+    ) + chalk.white.bold(" created.")
+  }`;
+  outputMsg(text);
 };
 
 export default genRoute;

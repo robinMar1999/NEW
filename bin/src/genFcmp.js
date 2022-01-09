@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
 import capitalize from "lodash.capitalize";
+import chalk from "chalk";
+
+import outputMsg from "../utils/outputMsg.js";
 
 // Text to store in the file
 const getCmpText = (name) => `import React from 'react';
@@ -35,7 +38,16 @@ const genFcmp = (name, additionalPath) => {
     path.join(currPath, `${capitalize(name)}.module.css`),
     cssText
   );
-  console.log("component created!");
+  const cname = capitalize(name);
+  const text = `${
+    chalk.bold.yellow(path.join(currPath, chalk.green(cname + ".js"))) +
+    chalk.white.bold(" created.")
+  }
+${
+  chalk.bold.yellow(path.join(currPath, chalk.green(cname + ".module.css"))) +
+  chalk.white.bold(" created.")
+}`;
+  outputMsg(text);
 };
 
 export default genFcmp;
