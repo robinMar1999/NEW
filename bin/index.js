@@ -37,16 +37,16 @@ Examples:
   );
 
 program
-  .command("fcomp <cmp_name> [additinalPath]")
+  .command("comp <comp_name> [additionalPath]")
   .description("generate function component for React app")
-  .action((cmp_name, additinalPath) => {
-    genFcmp(cmp_name, additinalPath);
+  .action((cmp_name, additionalPath) => {
+    genFcmp(cmp_name, additionalPath);
   })
   .addHelpText(
     "after",
     `
 Examples:
-  $ fcomp -n component_name`
+  $ comp -n component_name`
   );
 
 program.parse();

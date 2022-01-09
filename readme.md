@@ -48,7 +48,7 @@ $ new route rider
 Open terminal in react app and run following command.
 
 ```
-$ new fcomp <component_name> [additional_path]
+$ new comp <component_name> [additional_path]
 ```
 
 _Here additional_path is optional_
@@ -57,7 +57,7 @@ Functional component will be created in _src/components/[additional_path]/_
 **Examples**
 
 ```
-$ new fcomp layout
+$ new comp layout
 ```
 
 Following files will be created
@@ -66,7 +66,7 @@ Following files will be created
 2. _src/components/Layout/Layout.module.css_
 
 ```
-$ new fcomp navbar Headers/Nav
+$ new comp navbar Headers/Nav
 ```
 
 Following files will be created
