@@ -22,6 +22,7 @@ $ new model <model_name>
 ```
 
 model will be created in _src/models/_ directory of your app.
+
 **Example**
 
 ```
@@ -35,6 +36,7 @@ $ new route <route_name>
 ```
 
 route will be created in _src/routes/_ directory of your app.
+
 **Example**
 
 ```
