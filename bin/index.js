@@ -37,7 +37,7 @@ Examples:
   );
 
 program
-  .command("fcmp <cmp_name> [additinalPath]")
+  .command("fcomp <cmp_name> [additinalPath]")
   .description("generate function component for React app")
   .action((cmp_name, additinalPath) => {
     genFcmp(cmp_name, additinalPath);
@@ -46,7 +46,7 @@ program
     "after",
     `
 Examples:
-  $ fcmp -n component_name`
+  $ fcomp -n component_name`
   );
 
 program.parse();

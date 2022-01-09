@@ -48,7 +48,7 @@ $ new route rider
 Open terminal in react app and run following command.
 
 ```
-$ new fcmp <component_name> [additional_path]
+$ new fcomp <component_name> [additional_path]
 ```
 
 _Here additional_path is optional_
