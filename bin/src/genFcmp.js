@@ -23,28 +23,24 @@ const genFcmp = (name, additionalPath) => {
   if (additionalPath) {
     currPath = path.join(currPath, additionalPath);
   }
-  currPath = path.join(currPath, capitalize(name));
+  currPath = path.join(currPath, name);
   if (!fs.existsSync(currPath)) {
     fs.mkdirSync(currPath, { recursive: true });
   }
 
-  const cmpText = getCmpText(capitalize(name));
-  const cssText = `.${capitalize(name)}{
+  const cmpText = getCmpText(name);
+  const cssText = `.${name}{
   
 }`;
 
-  fs.writeFileSync(path.join(currPath, `${capitalize(name)}.js`), cmpText);
-  fs.writeFileSync(
-    path.join(currPath, `${capitalize(name)}.module.css`),
-    cssText
-  );
-  const cname = capitalize(name);
+  fs.writeFileSync(path.join(currPath, `${name}.js`), cmpText);
+  fs.writeFileSync(path.join(currPath, `${name}.module.css`), cssText);
   const text = `${
-    chalk.bold.yellow(path.join(currPath, chalk.green(cname + ".js"))) +
+    chalk.bold.yellow(path.join(currPath, chalk.green(name + ".js"))) +
     chalk.white.bold(" created.")
   }
 ${
-  chalk.bold.yellow(path.join(currPath, chalk.green(cname + ".module.css"))) +
+  chalk.bold.yellow(path.join(currPath, chalk.green(name + ".module.css"))) +
   chalk.white.bold(" created.")
 }`;
   outputMsg(text);
