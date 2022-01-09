@@ -1,0 +1,23 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "This is a cli to generate files for nodejs environment (MERN stack).",
+  "main": "bin/index.js",
+  "exports": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "new": "./bin/index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "boxen": "^6.2.1",
+    "chalk": "^5.0.0",
+    "commander": "^8.3.0",
+    "lodash.capitalize": "^4.2.1",
+    "yargs": "^17.3.1"
+  }
+}
