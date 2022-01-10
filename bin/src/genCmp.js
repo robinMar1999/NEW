@@ -1,16 +1,16 @@
 import fs from "fs";
 import path from "path";
-import capitalize from "lodash.capitalize";
 import chalk from "chalk";
 
 import outputMsg from "../utils/outputMsg.js";
 
 // Text to store in the file
 const getCmpText = (name) => `import React from 'react';
-const ${name} = () => {
+import classes from "./${name}.module.css";
+const ${name} = props => {
   return (
     <div className={classes.${name}}>
-      
+      ${name}
     </div>
   )
 }
