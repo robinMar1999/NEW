@@ -49,4 +49,17 @@ Examples:
   $ comp -n component_name`
   );
 
+program
+  .command("page <comp_name> [additionalPath]")
+  .description("generate function component for React app")
+  .action((cmp_name, additionalPath) => {
+    genCmp(cmp_name, additionalPath);
+  })
+  .addHelpText(
+    "after",
+    `
+Examples:
+  $ comp -n component_name`
+  );
+
 program.parse();
