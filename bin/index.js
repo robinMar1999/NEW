@@ -5,6 +5,7 @@ import { Command } from "commander";
 import genModel from "./src/genModel.js";
 import genRoute from "./src/genRoute.js";
 import genCmp from "./src/genCmp.js";
+import genPage from "./src/genPage.js";
 
 const program = new Command();
 
@@ -20,7 +21,7 @@ program
     "after",
     `
 Examples:
-  $ model -n model_name`
+  $ new model model_name`
   );
 
 program
@@ -33,7 +34,7 @@ program
     "after",
     `
 Examples:
-  $ route -n route_name`
+  $ new route route_name`
   );
 
 program
@@ -46,20 +47,20 @@ program
     "after",
     `
 Examples:
-  $ comp -n component_name`
+  $ new comp component_name`
   );
 
 program
   .command("page <comp_name> [additionalPath]")
-  .description("generate function component for React app")
+  .description("generate page component for React app")
   .action((cmp_name, additionalPath) => {
-    genCmp(cmp_name, additionalPath);
+    genPage(cmp_name, additionalPath);
   })
   .addHelpText(
     "after",
     `
 Examples:
-  $ comp -n component_name`
+  $ new page component_name`
   );
 
 program.parse();

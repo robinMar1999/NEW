@@ -17,7 +17,7 @@ const ${name} = props => {
 export default ${name}
 `;
 
-const genFcmp = (name, additionalPath) => {
+const genPage = (name, additionalPath) => {
   // Creating Directory Path
   let currPath = path.join(process.cwd(), "src/pages");
   if (additionalPath) {
@@ -46,4 +46,4 @@ ${
   outputMsg(text);
 };
 
-export default genFcmp;
+export default genPage;
